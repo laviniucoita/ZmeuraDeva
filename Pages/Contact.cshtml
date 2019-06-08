@@ -1,0 +1,50 @@
+﻿@page
+@model ContactModel
+@{
+    ViewData["Title"] = "Contact";
+}
+<h3>Aici poti sa ne contactezi pentru comenzi si oferte </h3>
+
+
+<div class="form-data">
+    <span class="badge badge-info">Info</span>
+    <h6>Momentan nu livram decat in raza de acoperire a Devei. Fiind un produs usor perisabil nu putem garanta pastrarea aceleasi calitati 
+    pe toata perioada drumului. Insa, pentru a vedea stocul disponibil, ofertele noastre si pentru a putea comanda o cantitate mai mare de zmeura, te rugam sa ne lasi datele
+    de contact si te vom contacta in cel mai scurt timp posibil.</h6>
+
+    <!-- Multiple inputs -->
+    <form method="POST">
+        
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Dvs.</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Nume" name="name">
+        <input type="text" class="form-control" placeholder="Prenume" name="surname">
+    </div>
+    
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="E-mail" name="email">
+    </div>
+
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Numar telefon *" name="phone">
+    </div>
+    <div class="form-group">
+        <label for="comment">Lasati-ne un comentariu sau o intrebare *:</label>
+        <textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
+    </div>
+    
+    <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="customCheck" name="news">
+        <label class="custom-control-label" for="customCheck">Sunteti de acord sa va informam pe e-mail de ofertele noastre pe viitor?</label>
+    </div>
+        <button type="submit" class="btn btn-primary">Trimite</button>
+    </form>
+
+    <div class="alert alert-success">
+        <strong>Success!</strong> Datele dvs. au fost trimise. Iti multumim!
+    </div>
+   
+</div>
+
